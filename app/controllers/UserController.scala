@@ -14,7 +14,7 @@ object UserController extends Controller {
       } map {
         profile => f(request)
       }).orElse {
-        Some(Redirect(routes.Application.index()))
+        Some(Redirect(routes.IndexController.index()))
       }.get
     }
   }
